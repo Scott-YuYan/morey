@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {
+    HashRouter as Router,
+} from "react-router-dom";
+
+import Wrapper from "./components/Wrapper";
+import Main from "./components/Main";
+import Nav from "./components/Nav";
+
+
+
+export default function ParamsExample() {
+    return (
+        <Router>
+            <Wrapper>
+                <Main/>
+                <Nav/>
+            </Wrapper>
+        </Router>
+    );
 }
 
-export default App;
+
